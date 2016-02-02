@@ -13,10 +13,13 @@ namespace HeadFirstCSharp.Cap7.Home
 {
     public partial class Form1 : Form
     {
+        private Location _currentLocation;
+
         public Form1()
         {
             InitializeComponent();
             CreateObjects();
+            MoveToNewLocation(_currentLocation);
         }
 
         private void CreateObjects()
@@ -43,6 +46,43 @@ namespace HeadFirstCSharp.Cap7.Home
 
             cozinha.Exits = new Location[] { salaJantar, quintalFundo };
             cozinha.DoorLocation = quintalFundo;
+
+            _currentLocation = quintalFrente;
+        }
+
+        private void MoveToNewLocation(Location currentLocation)
+        {
+            _currentLocation = currentLocation;
+
+            ddlExits.Items.Clear();
+
+            for (int i = 0; i < _currentLocation.Exits.Length; i++)
+            {
+                ddlExits.Items.Add(_currentLocation.Exits[i].Name);
+            }
+            ddlExits.SelectedIndex = 0;
+
+            txtDescription.Text = _currentLocation.Description;
+
+            if (_currentLocation is IHasExteriorDoor)
+            {
+                btnGoThroughtTheDoor.Visible = true;
+            }
+            else
+            {
+                btnGoThroughtTheDoor.Visible = false;
+            }
+        }
+
+        private void btnGoHere_Click(object sender, EventArgs e)
+        {
+            MoveToNewLocation(_currentLocation.Exits[ddlExits.SelectedIndex]);           
+        }
+
+        private void btnGoThroughtTheDoor_Click(object sender, EventArgs e)
+        {
+            IHasExteriorDoor exteriorLocation = _currentLocation as IHasExteriorDoor;
+            MoveToNewLocation(exteriorLocation.DoorLocation);
         }
     }
 }

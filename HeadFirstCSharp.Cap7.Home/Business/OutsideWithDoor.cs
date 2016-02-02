@@ -12,30 +12,8 @@ namespace HeadFirstCSharp.Cap7.Home.Business
         {
         }
 
-        public string DoorDescription
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public string DoorDescription { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public Location DoorLocation
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public Location DoorLocation { get; set; }
     }
 }
