@@ -47,11 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\IHasExteriorDoor.cs" />
+    <Compile Include="Business\IHidingPlace.cs" />
     <Compile Include="Business\Location.cs" />
     <Compile Include="Business\Outside.cs" />
     <Compile Include="Business\OutsideWithDoor.cs" />
+    <Compile Include="Business\OutsideWithHidingPlace.cs" />
     <Compile Include="Business\Room.cs" />
     <Compile Include="Business\RoomWithDoor.cs" />
+    <Compile Include="Business\RoomWithHidingPlace.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
