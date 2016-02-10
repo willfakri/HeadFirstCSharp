@@ -31,6 +31,12 @@ namespace HeadFirstCSharp.Cap7.Home
             Room salaJantar = new Room("Candelabro de Cristal", "Sala de Jantar");
             RoomWithDoor cozinha = new RoomWithDoor("Porta com Tela para fundos", "Detalhes em Aço Inox", "Cozinha");
 
+            RoomWithDoor escadas = new RoomWithDoor("Escadas para Hall Superior", "Corrimão de Madeira", "Escadas");
+            RoomWithDoor hallway = new RoomWithDoor("Escadas para sala de estar", "quadro de cachorro pulguento e armário", "Hall Superior");
+            Room quartoPrincipal = new Room("cama grande", "Quarto Principal");
+            Room quartoSecundario = new Room("cama pequena", "Segundo quarto");
+            Room banheiro = new Room("pia e vaso sanitário", "Banheiro");
+
             quintalFrente.Exits = new Location[] { salaEstar, jardim };
             quintalFrente.DoorLocation = salaEstar;
 
@@ -46,6 +52,16 @@ namespace HeadFirstCSharp.Cap7.Home
 
             cozinha.Exits = new Location[] { salaJantar, quintalFundo };
             cozinha.DoorLocation = quintalFundo;
+
+            quartoPrincipal.Exits = new Location[] { hallway };
+
+            quartoSecundario.Exits = new Location[] { hallway };
+
+            escadas.Exits = new Location[] { hallway, salaEstar };
+            escadas.DoorLocation = hallway;
+
+            hallway.Exits = new Location[] { quartoPrincipal, quartoSecundario, banheiro, escadas };
+            hallway.DoorLocation = escadas;
 
             _currentLocation = quintalFrente;
         }

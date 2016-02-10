@@ -49,6 +49,7 @@
     <Compile Include="Business\IHasExteriorDoor.cs" />
     <Compile Include="Business\IHidingPlace.cs" />
     <Compile Include="Business\Location.cs" />
+    <Compile Include="Business\Opponent.cs" />
     <Compile Include="Business\Outside.cs" />
     <Compile Include="Business\OutsideWithDoor.cs" />
     <Compile Include="Business\OutsideWithHidingPlace.cs" />

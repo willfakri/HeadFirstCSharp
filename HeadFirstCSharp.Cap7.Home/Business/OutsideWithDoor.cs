@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace HeadFirstCSharp.Cap7.Home.Business
 {
-    class OutsideWithDoor : Outside, IHasExteriorDoor
+    class OutsideWithDoor : OutsideWithHidingPlace, IHasExteriorDoor
     {
-        public OutsideWithDoor(bool hot, string name) : base(hot, name)
+        public OutsideWithDoor(bool hot, string name, string placeToHiding) : base(hot, name, placeToHiding)
         {
         }
 

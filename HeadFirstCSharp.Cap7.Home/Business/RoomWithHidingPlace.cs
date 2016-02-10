@@ -6,10 +6,20 @@ using System.Threading.Tasks;
 
 namespace HeadFirstCSharp.Cap7.Home.Business
 {
-    public class RoomWithHidingPlace : Room
+    public class RoomWithHidingPlace : Room, IHidingPlace
     {
-        public RoomWithHidingPlace(string decoration, string name) : base(decoration, name)
+        private string _placeToHiding;
+        public RoomWithHidingPlace(string decoration, string name, string placeToHiding) : base(decoration, name)
         {
+            _placeToHiding = placeToHiding;
+        }
+
+        public string PlaceToHiding
+        {
+            get
+            {
+                return _placeToHiding;
+            }
         }
     }
 }

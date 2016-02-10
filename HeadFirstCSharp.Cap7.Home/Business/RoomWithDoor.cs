@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace HeadFirstCSharp.Cap7.Home.Business
 {
-    public class RoomWithDoor : Room, IHasExteriorDoor
+    public class RoomWithDoor : RoomWithHidingPlace, IHasExteriorDoor
     {
-        public RoomWithDoor(string doorDescription, string decoration, string name)
-            :base(decoration, name)
+        public RoomWithDoor(string doorDescription, string decoration, string name, string placeToHiding)
+            :base(decoration, name, placeToHiding)
         {
             _doorDescription = doorDescription;
         }
