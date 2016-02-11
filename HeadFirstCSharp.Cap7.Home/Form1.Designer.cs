@@ -32,6 +32,8 @@
             this.btnGoHere = new System.Windows.Forms.Button();
             this.ddlExits = new System.Windows.Forms.ComboBox();
             this.btnGoThroughtTheDoor = new System.Windows.Forms.Button();
+            this.btnCheck = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDescription
@@ -71,15 +73,38 @@
             this.btnGoThroughtTheDoor.UseVisualStyleBackColor = true;
             this.btnGoThroughtTheDoor.Click += new System.EventHandler(this.btnGoThroughtTheDoor_Click);
             // 
+            // btnCheck
+            // 
+            this.btnCheck.Location = new System.Drawing.Point(13, 225);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(259, 23);
+            this.btnCheck.TabIndex = 4;
+            this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(13, 255);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(259, 23);
+            this.btnStart.TabIndex = 5;
+            this.btnStart.Text = "Se esconda!";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 234);
+            this.ClientSize = new System.Drawing.Size(284, 292);
+            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.btnGoThroughtTheDoor);
             this.Controls.Add(this.ddlExits);
             this.Controls.Add(this.btnGoHere);
             this.Controls.Add(this.txtDescription);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Rolê pela casa";
             this.ResumeLayout(false);
@@ -93,6 +118,8 @@
         private System.Windows.Forms.Button btnGoHere;
         private System.Windows.Forms.ComboBox ddlExits;
         private System.Windows.Forms.Button btnGoThroughtTheDoor;
+        private System.Windows.Forms.Button btnCheck;
+        private System.Windows.Forms.Button btnStart;
     }
 }
 
