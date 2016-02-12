@@ -21,7 +21,6 @@ namespace HeadFirstCSharp.Cap7.Home
         {
             InitializeComponent();
             CreateObjects();
-            MoveToNewLocation(_currentLocation);
         }
 
         private void CreateObjects()
@@ -136,9 +135,7 @@ namespace HeadFirstCSharp.Cap7.Home
         }
 
         private void btnStart_Click(object sender, EventArgs e)
-        {
-            MoveStart();
-            
+        {            
             for (int i = 10; i > 0; i--)
             {                
                 txtDescription.Text = $"{i}...";
@@ -146,6 +143,11 @@ namespace HeadFirstCSharp.Cap7.Home
                 System.Threading.Thread.Sleep(350);
             }
             txtDescription.Text = "Pronto ou não, ai vou eu!";
+            MoveStart();
+            MoveToNewLocation(_currentLocation);
+            btnGoHere.Visible = true;
+            ddlExits.Visible = true;
+            btnGoThroughtTheDoor.Visible = true;
             NameCheckButton();
         }
 
