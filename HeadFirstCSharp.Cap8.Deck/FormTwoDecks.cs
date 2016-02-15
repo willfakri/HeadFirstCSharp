@@ -82,8 +82,11 @@ namespace HeadFirstCSharp.Cap8.Deck
 
         private void btnDeck1ToDeck2_Click(object sender, EventArgs e)
         {
-            _deck2.Cards.Add(_deck1.Deal(lbDeck1.SelectedIndex));
-            LoadAll();
+            if (lbDeck1.SelectedIndex >= 0)
+            {
+                _deck2.Cards.Add(_deck1.Deal(lbDeck1.SelectedIndex));
+                LoadAll();
+            }
         }
 
         private void LoadAll()
@@ -94,8 +97,11 @@ namespace HeadFirstCSharp.Cap8.Deck
 
         private void btnDeck2ToDeck1_Click(object sender, EventArgs e)
         {
-            _deck1.Cards.Add(_deck2.Deal(lbDeck2.SelectedIndex));
-            LoadAll();
+            if (lbDeck2.SelectedIndex >= 0)
+            {
+                _deck1.Cards.Add(_deck2.Deal(lbDeck2.SelectedIndex));
+                LoadAll();
+            }            
         }
     }
 }
