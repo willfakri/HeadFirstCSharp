@@ -14,7 +14,6 @@ namespace HeadFirstCSharp.Cap8.Deck
     public partial class Form1 : Form
     {
         private Random _random = new Random();
-        private Card _card;
         public Form1()
         {
             InitializeComponent();            
@@ -22,8 +21,28 @@ namespace HeadFirstCSharp.Cap8.Deck
 
         private void btnNewCard_Click(object sender, EventArgs e)
         {
-            _card = new Card((Card.Suits)_random.Next(0, 3), (Card.Values)_random.Next(1, 13));
-            txtCard.Text = _card.Name;
+            List<Card> cards = new List<Card>();
+
+            for (int i = 0; i < 5; i++)
+            {
+                cards.Add(new Card((Card.Suits)_random.Next(0, 3), (Card.Values)_random.Next(1, 13)));
+            }
+            
+            txtCardsUnsorted.Text = WriteResult(cards);
+
+            CardComparer cardComparer = new CardComparer();
+            cards.Sort(cardComparer);
+            txtCardsSorted.Text = WriteResult(cards);
+        }
+
+        private string WriteResult(List<Card> cards)
+        {
+            string result = "";
+            foreach (var item in cards)
+            {
+                result += "\r\n" + item.Name;
+            }
+            return result;
         }
     }
 }
