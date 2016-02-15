@@ -8,18 +8,24 @@ namespace HeadFirstCSharp.Cap8.Deck.Business
 {
     public class Card
     {
+        public Card(Card.Suits suitCard, Card.Values valueCard)
+        {
+            Suit = suitCard;
+            Value = valueCard;
+        }
+
         /// <summary>
         /// Naipe
         /// </summary>
-        public string Suit { get; set; }
+        public Card.Suits Suit { get; set; }
 
-        public string Value { get; set; }
+        public Card.Values Value { get; set; }
 
         public string Name
         {
             get
             {
-                return $"{Value} de {Suit}";
+                return $"{Value} of {Suit}";
             }
         }
 
