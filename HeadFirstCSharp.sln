@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeadFirstCSharp.Cap7.Home",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeadFirstCSharp.Cap8.Deck", "HeadFirstCSharp.Cap8.Deck\HeadFirstCSharp.Cap8.Deck.csproj", "{05E06239-F776-4276-888A-3C419F0AA376}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeadFirstCSharp.Cap8.GoFish", "HeadFirstCSharp.Cap8.GoFish\HeadFirstCSharp.Cap8.GoFish.csproj", "{5637A79D-81C9-4926-9CDE-ED96D4611214}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{05E06239-F776-4276-888A-3C419F0AA376}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05E06239-F776-4276-888A-3C419F0AA376}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05E06239-F776-4276-888A-3C419F0AA376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5637A79D-81C9-4926-9CDE-ED96D4611214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5637A79D-81C9-4926-9CDE-ED96D4611214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5637A79D-81C9-4926-9CDE-ED96D4611214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5637A79D-81C9-4926-9CDE-ED96D4611214}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
